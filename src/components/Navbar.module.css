@@ -1,0 +1,60 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  height: 60px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  transition: background 0.3s;
+}
+
+.logo {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.links a {
+  font-size: 13px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.links a:hover { color: var(--text); }
+
+.themeBtn {
+  background: none;
+  border: 0.5px solid var(--border2);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text2);
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.themeBtn:hover {
+  background: var(--bg2);
+  color: var(--text);
+}
+
+@media (max-width: 520px) {
+  .links a { display: none; }
+}
